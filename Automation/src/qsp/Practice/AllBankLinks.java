@@ -7,12 +7,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 
-public class AllBankLinks {
+public class AllBankLinks extends BaseClass {
 
 	public static void main(String[] args) {
-		System.setProperty("webdriver.edge.driver", "./driver/msedgedriver.exe");
 		WebDriver driver = new EdgeDriver();
-		driver.get("https://parabank.parasoft.com/parabank/index.htm");
+		driver.get(parabank);
 		List<WebElement> links = driver.findElements(By.xpath("//a"));
 		int count = links.size();
 		System.out.println(count);

@@ -8,11 +8,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class ParaBank {
+public class ParaBank extends BaseClass {
 	public static void main(String[] args) throws InterruptedException {
 		System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://parabank.parasoft.com/parabank/index.htm");
+		driver.get(parabank);
 		Thread.sleep(2000);
 		driver.findElement(By.linkText("Register")).click();
 		driver.findElement(By.id("customer.firstName")).sendKeys("Yogesh");
